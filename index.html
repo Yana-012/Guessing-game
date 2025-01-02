@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <style>
+    button {
+      width: 50px;
+      height: 30px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to the Number Guessing Game!</h1>
+  <h2>Guess a Number (1-12)</h2>
+  <p>Click a number to make your guess:</p>
+
+  <form id="guessForm" action="/guessnum/guess/" method="get">
+    <div>
+      <button type="button" onclick="submitGuess(1)">1</button>
+      <button type="button" onclick="submitGuess(2)">2</button>
+      <button type="button" onclick="submitGuess(3)">3</button>
+      <button type="button" onclick="submitGuess(4)">4</button>
+      <button type="button" onclick="submitGuess(5)">5</button>
+      <button type="button" onclick="submitGuess(6)">6</button>
+      <button type="button" onclick="submitGuess(7)">7</button>
+      <button type="button" onclick="submitGuess(8)">8</button>
+      <button type="button" onclick="submitGuess(9)">9</button>
+      <button type="button" onclick="submitGuess(10)">10</button>
+      <button type="button" onclick="submitGuess(11)">11</button>
+      <button type="button" onclick="submitGuess(12)">12</button>
+    </div>
+  </form>
+
+  <script>
+    function submitGuess(number) {
+      const form = document.getElementById('guessForm');
+      form.action = '/guessnum/guess/' + number;
+      form.submit();
+    }
+  </script>
+</body>
+
+</html>
